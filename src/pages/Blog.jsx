@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { Calendar, Clock, ArrowRight } from 'lucide-react'; 
 
 const Blog = () => {
@@ -128,7 +128,7 @@ const Blog = () => {
   if (selectedArticle) {
     const article = articles.find(a => a.id === selectedArticle);
     return (
-           <div data-aos="zoom-in" className="pt-24 pb-20 px-4 bg-gradient-to-br from-purple-900 via-blue-800 to-cyan-700">
+      <div className="pt-24 pb-20 px-4 min-h-screen">
         <div className="max-w-4xl mx-auto">
           <button
             onClick={() => setSelectedArticle(null)}
@@ -161,7 +161,7 @@ const Blog = () => {
             </div>
             
             <div className="prose prose-invert max-w-none"> 
-                           {article.content.split('\n').map((paragraph, idx) => {
+              {article.content.split('\n').map((paragraph, idx) => {
                 if (paragraph.trim() === '') return <br key={idx} />;
                 if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
                   return (
@@ -191,7 +191,7 @@ const Blog = () => {
   }
 
   return (
-       <div className="pt-24 pb-20 px-4 bg-gradient-to-br from-purple-900 via-blue-800 to-cyan-700 min-h-screen">
+    <div className="pt-24 pb-20 px-4 min-h-screen">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-6xl font-bold bg-gradient-to-r from-cyan-300 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Learning Insights</h1>
@@ -213,7 +213,7 @@ const Blog = () => {
                 'bg-gradient-to-r from-teal-400 to-blue-400'
               }`}></div>
               <div className="p-6"> 
-                               <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-between mb-4">
                   <span className={`${
                     idx % 4 === 0 ? 'bg-gradient-to-r from-purple-500 to-pink-500' :
                     idx % 4 === 1 ? 'bg-gradient-to-r from-blue-500 to-cyan-500' :
@@ -259,4 +259,3 @@ const Blog = () => {
 };
 
 export default Blog;
- 

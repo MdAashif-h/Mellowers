@@ -55,7 +55,7 @@ const RewardsPage = () => {
     );
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-10">
+       <div className="pt-24 pb-20 px-4 min-h-screen">
             <div className="max-w-7xl mx-auto px-4">
                 <h1 className="text-3xl font-bold text-center mb-8 text-blue-200">
                     Rewards

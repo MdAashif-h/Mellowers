@@ -140,7 +140,7 @@ const Community = () => {
   });
 
   return (
-    <div className="pt-24 pb-20 px-4 min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="pt-24 pb-20 px-4 min-h-screen">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-8">
           
